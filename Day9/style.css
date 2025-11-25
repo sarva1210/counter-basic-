@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-color: black;
+}
+
+main{
+    padding: 20px;
+    background: linear-gradient(to right bottom, rgb(26,26,26), rgb(35,35,35), black);
+}
+
+/*  Reel container  */
+section{
+    height: 100vh;
+    width: 350px;
+    border-radius: 10px;
+    margin: auto;
+    /* overflow: hidden; */
+}
+
+.all-reels{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory ;
+    scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+
+/*  Each Reel  */
+.reel{
+    width: 100%;
+    /* height: 560px; */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.reel video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*  Bottom Gradient & Caption  */
+.reel .bottom{
+    padding: 30px 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+}
+
+.bottom .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom .user img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bottom .user h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.bottom .user button{
+    background-color: transparent;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid white;
+}
+
+.bottom > h3{
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/*  Right Action Icons  */
+.right{
+    width: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.right i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.right h6{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.right div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.right h4{
+    cursor: pointer;
+}
+
+.love{
+    color: rgb(205, 8, 8);
+}
